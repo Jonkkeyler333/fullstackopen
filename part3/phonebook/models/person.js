@@ -4,27 +4,27 @@ mongoose.set('strictQuery',false)
 mongoose.connect(url, { family: 4 }).then(() => {
   console.log('connected to MongoDB')
 })
-.catch(error => {
-  console.log('error connecting to MongoDB:', error.message)
-})
+  .catch(error => {
+    console.log('error connecting to MongoDB:', error.message)
+  })
 
 const personSchema = new mongoose.Schema({
-    name: {
-      type: String,
-      required: true,
-      minLength: 3
-    },
-    number: {
-      type: String,
-      length: 8,
-      required: true,
-      validate: {
-        validator: function(v) {
-          return /^\d{2,3}-\d+$/.test(v)
-        },
-        message: props => `${props.value} is not a valid phone number!`
-      }
+  name: {
+    type: String,
+    required: true,
+    minLength: 3
+  },
+  number: {
+    type: String,
+    length: 8,
+    required: true,
+    validate: {
+      validator: function(v) {
+        return /^\d{2,3}-\d+$/.test(v)
+      },
+      message: props => `${props.value} is not a valid phone number!`
     }
+  }
 })
 
 personSchema.set('toJSON', {
