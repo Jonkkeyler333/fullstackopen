@@ -1,0 +1,26 @@
+{
+  "name": "blog_list",
+  "version": "1.0.0",
+  "description": "software for save interesting stuff abour many blogs",
+  "license": "ISC",
+  "author": "keyler",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development node --watch index.js",
+    "test": "cross-env NODE_ENV=test node --test"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "lodash": "^4.17.23",
+    "mongoose": "^9.2.4"
+  },
+  "devDependencies": {
+    "supertest": "^7.2.2"
+  }
+}

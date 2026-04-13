@@ -1,0 +1,49 @@
+GET http://localhost:3001/api/blogs
+
+###
+GET http://localhost:3001/api/users
+
+###
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "keyler",
+    "name": "jonk sanchez",
+    "password": "123455"
+}
+
+###
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "camilo",
+    "name": "camilo sexto",
+    "password": "123455"
+}
+
+###
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtleWxlciIsImlkIjoiNjlkMmRiNmQzMmQyYTFiMDA0YmZhZWU1IiwiaWF0IjoxNzc1NDMyNjQ4LCJleHAiOjE3NzU0MzYyNDh9.YYQZH6SI-OD4EqxFnEFi-Gy4XMcYkKcqDj9f_TtGvQ8
+
+{
+    "title": "rust is the future",
+    "author": "keyler sanchez",
+    "url": "http://rust.com",
+    "likes": 19
+}
+
+###
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+    "username": "martin",
+    "password": "123455"
+}
+
+###
+DELETE http://localhost:3001/api/blogs/69d2f3eade027b1432664594
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hcnRpbiIsImlkIjoiNjlkMmVlNDcxOGQ3YzFiY2UyY2FjOTViIiwiaWF0IjoxNzc1NDMyNzEwLCJleHAiOjE3NzU0MzYzMTB9.-WdhRLbBcRe4wUE51LAeSC-Z9s950ovx_NntD8DWr6A
